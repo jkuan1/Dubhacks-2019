@@ -22,7 +22,14 @@ public class MyWidget extends AppWidgetProvider {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         // There may be multiple widgets active, so update all of them
         for (int appWidgetId : appWidgetIds) {
-            updateAppWidget(context, appWidgetManager, appWidgetId);
+            //updateAppWidget(context, appWidgetManager, appWidgetId);
+            Intent intent = new Intent(context, MainActivity.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+
+            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.my_widget);
+            views.setOnClickPendingIntent(R.id.my_widget_button, pendingIntent);
+
+            appWidgetManager.updateAppWidget(appWidgetId, views);
         }
     }
 
