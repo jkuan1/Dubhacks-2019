@@ -14,8 +14,6 @@ public class MyWidget extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
-
-
     }
 
     @Override
