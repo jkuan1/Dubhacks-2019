@@ -10,7 +10,7 @@
         android:layout_width="152dp"
         android:layout_height="118dp"
         android:layout_marginTop="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText5"
+        app:layout_constraintBottom_toTopOf="@+id/NewGoal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText5"
+        android:id="@+id/NewGoal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="New Goal"
@@ -36,20 +36,20 @@
         tools:layout_editor_absoluteX="1dp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/GoalLength"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Goal Length"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
+        app:layout_constraintTop_toBottomOf="@+id/Description"
         tools:layout_editor_absoluteX="0dp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/Description"
         android:layout_width="413dp"
         android:layout_height="224dp"
         android:hint="Description"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText5"
+        app:layout_constraintTop_toBottomOf="@+id/NewGoal"
         tools:layout_editor_absoluteX="-3dp" />
 
     <Button
@@ -60,6 +60,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/GoalLength" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
