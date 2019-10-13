@@ -45,8 +45,14 @@
         </activity>
 
         <activity
+            android:name=".AddGoalActivity"
+            android:label="GoalScreen" />
+
+        <activity
             android:name=".MainActivity"
             android:label="MainScreen" />
     </application>
+
+
 
 </manifest>
