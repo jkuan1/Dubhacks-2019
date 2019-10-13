@@ -40,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
+                .requestId()
+                .requestIdToken("1000528698833-fg5sipgvmoj38ujtr9j2phnq93ibntn0.apps.googleusercontent.com")
                 .build();
 
         // Build a GoogleSignInClient with the options specified by gso.
@@ -73,6 +75,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(account != null){
             System.out.println("LOGIN DID WORK");
+            System.out.println(account.getEmail() + " " + account.getIdToken() + " " + account.getId());
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
         }
 
@@ -123,5 +126,4 @@ public class LoginActivity extends AppCompatActivity {
             updateUI(null);
         }
     }
-
 }

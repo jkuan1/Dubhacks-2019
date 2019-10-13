@@ -42,13 +42,4 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
-
-//    @Override
-////    protected void onStart () {
-////
-////        TextView textView = (TextView) findViewById(R.id.textView);
-////        textView.setText("You're Gay"); //set text for text view
-////
-////    }
-
 }
