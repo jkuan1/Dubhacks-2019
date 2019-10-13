@@ -12,6 +12,7 @@
         android:layout_marginTop="200dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputEditText5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/trophygood" />
@@ -29,44 +30,36 @@
         android:id="@+id/textInputEditText5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Goal 1:"
+        android:hint="New Goal"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:layout_editor_absoluteX="-13dp" />
+        tools:layout_editor_absoluteX="1dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Goal 3:"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText3"
+        android:hint="Goal Length"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
         tools:layout_editor_absoluteX="0dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Goal 2:"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText"
+        android:layout_width="413dp"
+        android:layout_height="224dp"
+        android:hint="Description"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText5"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="-3dp" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText3"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Goal 4:"
-        app:layout_constraintBottom_toTopOf="@+id/textInputEditText4"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
-        tools:layout_editor_absoluteX="-1dp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Goal 5:"
+        android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText3"
-        tools:layout_editor_absoluteX="-1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
