@@ -9,8 +9,8 @@
         android:id="@+id/welcome_message"
         android:layout_width="match_parent"
         android:layout_height="34dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="495dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="109dp"
         android:text="Welcome to 8bit Cal!"
         android:textAlignment="center"
         android:textSize="24sp" />
@@ -19,19 +19,23 @@
         android:id="@+id/skip_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="166dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="62dp"
         android:text="Skip" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/welcome_message"
+        android:layout_above="@+id/skip_button"
         android:layout_alignEnd="@+id/welcome_message"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="-373dp" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="52dp" />
 
 </RelativeLayout>

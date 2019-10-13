@@ -46,7 +46,7 @@
 
 /*        <activity
             android:name=".AddGoalActivity"
-            android:label="GoalScreen" />
+            android:label="Goals" />
 */
         <activity
             android:name=".SettingsActivity"
