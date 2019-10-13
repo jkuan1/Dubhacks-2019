@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -15,6 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class LoginActivity extends AppCompatActivity {
@@ -40,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
+                .requestId()
+                .requestIdToken("1000528698833-fg5sipgvmoj38ujtr9j2phnq93ibntn0.apps.googleusercontent.com")
                 .build();
 
         // Build a GoogleSignInClient with the options specified by gso.
@@ -65,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        //System.out.println(account.getEmail());
         updateUI(account);
         super.onStart();
     }
@@ -73,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(account != null){
             System.out.println("LOGIN DID WORK");
+            System.out.println(account.getEmail() + " " + account.getIdToken() + " " + account.getId());
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
         }
 
@@ -124,4 +130,15 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    private void signOut(){
+
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // ...
+                        System.out.println("onComplete Status");
+                    }
+                });
+    }
 }
