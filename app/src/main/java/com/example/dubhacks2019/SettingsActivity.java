@@ -62,14 +62,22 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void signOut() {
-        mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        // ...
-                        System.out.println("onComplete Status");
-                        startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
-                    }
-                });
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        mGoogleSignInClient.signOut();
+        System.out.println("Sign out");
+        startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+//                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Void> task) {
+//                        // ...
+//                        System.out.println("onComplete Status");
+//                        startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+//                    }
+//                });
     }
 }

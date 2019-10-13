@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -15,6 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class LoginActivity extends AppCompatActivity {
@@ -67,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        System.out.println(account.getEmail());
+        //System.out.println(account.getEmail());
         updateUI(account);
         super.onStart();
     }
@@ -126,5 +128,17 @@ public class LoginActivity extends AppCompatActivity {
             Log.w("Login fail tag", "signInResult:failed code=" + e.getStatusCode());
             updateUI(null);
         }
+    }
+
+    private void signOut(){
+
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // ...
+                        System.out.println("onComplete Status");
+                    }
+                });
     }
 }
