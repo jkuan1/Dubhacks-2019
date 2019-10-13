@@ -25,10 +25,17 @@ public class AddGoalActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.goals_screen);
 
-    }
-
+        final Button button = findViewById(R.id.ConfirmButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(AddGoalActivity.this, MainActivity.class));
+            }
+        });
+        }
     @Override
     protected void onStart() {
         super.onStart();
     }
-}
+
+    }
+
