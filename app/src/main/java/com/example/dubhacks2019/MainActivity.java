@@ -24,12 +24,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        final Button button = findViewById(R.id.settings_button);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button settings_button = findViewById(R.id.settings_button);
+        settings_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             }
         });
+
+
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
