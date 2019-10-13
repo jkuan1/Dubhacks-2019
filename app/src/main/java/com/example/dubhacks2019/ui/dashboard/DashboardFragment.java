@@ -37,13 +37,13 @@ public class DashboardFragment extends Fragment {
 
         });
 
- /*       final Button goals_button = root.findViewById(R.id.add_goal_button);
+        final Button goals_button = root.findViewById(R.id.add_goal_button);
         goals_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), AddGoalActivity.class);
                 startActivity(i);
             }
-        }); */
+        });
 
         return root;
     }
