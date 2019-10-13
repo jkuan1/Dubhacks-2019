@@ -36,6 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
                 switch (v.getId()) {
                 // ...
                 case R.id.LogoutButton:
+                    System.out.println("Logout is pressed");
                     signOut();
                     break;
                 // ...
@@ -66,6 +67,7 @@ public class SettingsActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         // ...
+                        System.out.println("onComplete Status");
                         startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
                     }
                 });
