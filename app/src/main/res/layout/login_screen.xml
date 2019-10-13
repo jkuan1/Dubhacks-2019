@@ -18,4 +18,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skip" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/welcome_message"
+        android:layout_alignEnd="@+id/welcome_message"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="137dp" />
+
 </RelativeLayout>
