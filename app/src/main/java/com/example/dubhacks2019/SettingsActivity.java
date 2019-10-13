@@ -28,9 +28,17 @@ public class SettingsActivity extends AppCompatActivity {
         final Button button = findViewById(R.id.LogoutButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+                //startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+                switch (v.getId()) {
+                // ...
+                case R.id.LogoutButton:
+                    signOut();
+                    break;
+                // ...
+            }
             }
         });
+
 //        @Override
 //        public void onClick(View v) {
 //            switch (v.getId()) {
