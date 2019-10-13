@@ -1,9 +1,11 @@
 package com.example.dubhacks2019.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -12,6 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.dubhacks2019.AddGoalActivity;
+import com.example.dubhacks2019.LoginActivity;
+import com.example.dubhacks2019.MainActivity;
 import com.example.dubhacks2019.R;
 
 public class DashboardFragment extends Fragment {
@@ -29,7 +34,17 @@ public class DashboardFragment extends Fragment {
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
+
         });
+
+        final Button goals_button = root.findViewById(R.id.add_goal_button);
+        goals_button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), AddGoalActivity.class);
+                startActivity(i);
+            }
+        });
+
         return root;
     }
 }
