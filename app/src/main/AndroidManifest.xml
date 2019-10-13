@@ -48,10 +48,10 @@
             </intent-filter>
         </activity>
 
-/*        <activity
+        <activity
             android:name=".AddGoalActivity"
-            android:label="Goals" />
-*/
+            android:label="GoalScreen" />
+
         <activity
             android:name=".SettingsActivity"
             android:label="@string/setting_name">

@@ -23,12 +23,15 @@ public class UnityActiviy extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+//            animate.putExtra("arguments", "data from android");
+//            startActivity(animate);
             //Intent intent = new Intent(mContext, UnityPlayerActivity.class);
            // startActivity(intent);
         }
 
         @Override
         protected void onStart() {
+
             super.onStart();
         }
     }
