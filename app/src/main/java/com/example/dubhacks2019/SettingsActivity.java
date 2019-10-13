@@ -31,6 +31,16 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
             }
         });
+//        @Override
+//        public void onClick(View v) {
+//            switch (v.getId()) {
+//                // ...
+//                case R.id.LogoutButton:
+//                    signOut();
+//                    break;
+//                // ...
+//            }
+//        }
     }
 
     @Override
