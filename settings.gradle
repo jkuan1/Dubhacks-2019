@@ -1,2 +1,3 @@
-include ':app'
+include ':app', ':DubHacks8bitcal-debug'
 rootProject.name='DubHacks2019'
+include ':DubHacks8bitcal'
